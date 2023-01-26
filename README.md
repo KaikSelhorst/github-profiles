@@ -11,7 +11,7 @@ In this project i used
 
 ### About the challenge
 
-Um desafio consistia em criar uma aplicação web que utilizando a Api do GitHub buscasse os usuarios de acordo com o nome digitado no input.
+A challenge was to create a web application that using the GitHub Api would search for users according to the name entered in the input.
 
 #### Minimum requirements of the challenge
 
