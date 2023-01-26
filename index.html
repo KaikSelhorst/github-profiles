@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nothing to see here</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        list-style: none;
+        outline: none;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      body {
+        background: #1a1a1a;
+      }
+      form {
+        padding: 4px 4px 4px 8px;
+        margin: 32px auto 80px;
+        border: 1px solid #42b883;
+        display: grid;
+        grid-template-columns: 24px 1fr max-content;
+        align-items: center;
+        max-width: 360px;
+        color: rgb(250 250 250);
+        height: 48px;
+        border-radius: 2px;
+        background: #2f2f2f;
+      }
+      input {
+        appearance: none;
+        color: inherit;
+        background: transparent;
+        border: 0;
+        font-size: 1rem;
+        height: 100%;
+        outline: none;
+        padding: 0 0 0 8px;
+      }
+      svg {
+        stroke-width: 1.6;
+        vertical-align: middle;
+        color: #42b883;
+      }
+      button {
+        appearance: none;
+        display: block;
+        border-radius: 2px;
+        padding: 6px 12px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s all;
+        line-height: 1.5rem;
+        color: #1a1a1a;
+        background: #42b883;
+        border: none;
+      }
+      #app {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .user {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        margin-bottom: 12px;
+      }
+      .avatar {
+        border-radius: 2px;
+        overflow: hidden;
+        max-width: 96px;
+      }
+      .user-status {
+        display: grid;
+        grid-auto-rows: min-content;
+      }
+      .user-status h1 {
+        color: rgb(255 255 255 / 87%);
+        font-size: 1.5rem;
+        transition: color 0.3s;
+        line-height: 2rem;
+      }
+      .user-status span {
+        color: rgb(235 235 235 / 60%);
+      }
+      .user:hover h1 {
+        color: #42b883;
+      }
+      .user-repos {
+        border-top: 2px solid #42b883;
+        display: grid;
+        gap: 12px;
+        padding: 12px 0;
+        width: 58%;
+        margin: 0 auto;
+      }
+      .user-repos li > a {
+        display: grid;
+        align-items: center;
+        color: #42b883;
+        padding: 4px 8px;
+        font-weight: 500;
+        transition: all 0.3s;
+        border-radius: 2px;
+        background: #242424;
+        grid-template-columns: 1fr max-content;
+      }
+      .repo-status > * {
+        font-size: 0.875rem;
+      }
+      .user-repos li > a:hover {
+        color: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <form action="">
+        <svg
+          width="20"
+          height="20"
+          class="DocSearch-Search-Icon"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+            stroke="currentColor"
+            fill="none"
+            fill-rule="evenodd"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+        <input type="text" placeholder="User name" required />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+    <main id="app"></main>
+    <script src="./dist/script.js"></script>
+  </body>
+</html>
